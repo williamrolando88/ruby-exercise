@@ -48,4 +48,37 @@ describe "Instance of solver to be created" do
       expect(answer).to eql "54321"
     end
   end
+
+  context "running the FizzBuzz method" do
+    it "for any not positive integer number return Invalid input type" do
+      answer = @solver.fizzbuzz(-3.69)
+      expect(answer).to eql 'Invalid input type'
+    end
+    
+    it "for any input that is not a number return Invalid input type" do
+      answer = @solver.fizzbuzz('test')
+      expect(answer).to eql 'Invalid input type'
+    end
+    
+    it "for any positive number divisible by 3 to return 'fizz'" do
+      answer = @solver.fizzbuzz(3 * 126)
+      expect(answer).to eql 'fizz'
+    end
+    
+    it "for any positive number divisible by 5 to return 'buzz'" do
+      answer = @solver.fizzbuzz(5 * 127)
+      expect(answer).to eql 'buzz'
+    end
+
+    it "for any positive number divisible by 3 and 5 to return 'fizzbuzz'" do
+      answer = @solver.fizzbuzz(3 * 5 * 161)
+      expect(answer).to eql 'fizzbuzz'
+    end
+
+    it "for any positive number non divisible by 3 or 5 to return number itself as string" do
+      answer = @solver.fizzbuzz(161)
+      expect(answer).to eql '161'
+    end
+  end
+  
 end
