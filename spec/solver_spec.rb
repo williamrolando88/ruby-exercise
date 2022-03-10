@@ -1,11 +1,11 @@
 require_relative '../solver.rb'
 
 describe "Instance of solver to be created" do
-  context "running the Factorial method" do
-    before :each do
-      @solver = Solver.new
-    end
+  before :each do
+    @solver = Solver.new
+  end
 
+  context "running the Factorial method" do
     it "matches the factorial of 3 to be 6" do
       answer = @solver.factorial(3)
       expect(answer).to eql 6 
@@ -35,5 +35,17 @@ describe "Instance of solver to be created" do
       answer = @solver.factorial('testing')
       expect(answer).to eql 'Invalid type input'
     end    
+  end
+
+  context "running the Reverse method" do
+    it 'should reverse the string "eye" to "eye"' do
+      answer = @solver.reverse("eye")
+      expect(answer).to eql "eye"
+    end
+
+    it 'should reverse the number 12345 to a string "54321"' do
+      answer = @solver.reverse(12345)
+      expect(answer).to eql "54321"
+    end
   end
 end
