@@ -1,10 +1,9 @@
 class Solver
   def factorial(number)
-    if !number.is_a?(Integer)
-      'Invalid type input'
-    elsif number.negative?
-      nil
-    elsif number.zero?
+    state = input_haserrors(number)
+    return state if state
+
+    if number.zero?
       1
     else
       (1..number).inject(:*)
@@ -35,7 +34,9 @@ class Solver
   def input_haserrors(number)
     if !number.is_a?(Numeric)
       'Invalid input type: number must be an number.'
-    elsif !number.is_a?(Integer) && !number.positive?
+    elsif !number.is_a?(Integer)
+      'Invalid input type: number must be an integer.'
+    elsif number.negative?
       'Invalid input type: number must be a positive integer.'
     else
       false
