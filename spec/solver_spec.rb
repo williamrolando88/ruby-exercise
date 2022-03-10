@@ -4,6 +4,8 @@ describe "Instance of solver to be created" do
   context "running the Factorial method" do
     before :each do
       @solver = Solver.new
+    end
+
     it "matches the factorial of 3 to be 6" do
       answer = @solver.factorial(3)
       expect(answer).to eql 6 
@@ -26,7 +28,7 @@ describe "Instance of solver to be created" do
     
     it "for any not integer positive number to return nil" do
       answer = @solver.factorial(3.69)
-      expect(answer).to be_nil
+      expect(answer).to eql 'Invalid type input'
     end    
 
     it "for any input that is not number to return Invalid type input error" do
