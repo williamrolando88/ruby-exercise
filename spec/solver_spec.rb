@@ -52,12 +52,12 @@ describe "Instance of solver to be created" do
   context "running the FizzBuzz method" do
     it "for any not positive integer number return Invalid input type" do
       answer = @solver.fizzbuzz(-3.69)
-      expect(answer).to eql 'Invalid input type'
+      expect(answer).to eql 'Invalid input type: number must be a positive integer.'
     end
     
     it "for any input that is not a number return Invalid input type" do
       answer = @solver.fizzbuzz('test')
-      expect(answer).to eql 'Invalid input type'
+      expect(answer).to eql 'Invalid input type: number must be an number.'
     end
     
     it "for any positive number divisible by 3 to return 'fizz'" do
