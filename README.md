@@ -27,6 +27,12 @@
 - Twitter: [@WillyMorales93](https://twitter.com/WillyMorales93)
 - LinkedIn: [William Morales](https://www.linkedin.com/in/william-rolando-morales/)
 
+👤 **Luis Abarca**
+
+- GitHub: [@TheLuisAbarca](https://github.com/theLuisAbarca/)
+- Twitter: [@TheLuisAbarca](https://twitter.com/TheLuisAbarca)
+- LinkedIn: [Luís Anghelo Abarca Villacís](https://www.linkedin.com/in/techadvisor-luis-abarca/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -49,7 +55,7 @@ GUI & Graphic Design: Cindy Shin
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2022 William Morales
+Copyright (c) 2022 William Morales, Luis Abarca
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
