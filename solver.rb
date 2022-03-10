@@ -12,7 +12,7 @@ class Solver
   end
   
   def reverse(string)
-    
+    string.to_s.reverse
   end
   
   def fizzbuzz(number)
