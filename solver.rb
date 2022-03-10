@@ -1,35 +1,44 @@
 class Solver
   def factorial(number)
     if !number.is_a?(Integer)
-      return 'Invalid type input'
+      'Invalid type input'
     elsif number.negative?
-      return nil
+      nil
     elsif number.zero?
-      return 1
+      1
     else
-      return (1..number).inject(:*)
+      (1..number).inject(:*)
     end
   end
-  
+
   def reverse(string)
     string.to_s.reverse
   end
-  
+
   def fizzbuzz(number)
-    if !number.is_a?(Numeric)
-      return 'Invalid input type: number must be an number.'
-    elsif !number.is_a?(Integer) && !number.positive?
-      return 'Invalid input type: number must be a positive integer.'
+    state = input_haserrors(number)
+    return state if state
+
+    if (number % 3).zero? && (number % 5).zero?
+      'fizzbuzz'
+    elsif (number % 3).zero?
+      'fizz'
+    elsif (number % 5).zero?
+      'buzz'
     else
-      if number % 3 == 0 && number % 5 == 0
-        return 'fizzbuzz'
-      elsif number % 3 == 0
-        return 'fizz'
-      elsif number % 5 == 0
-        return 'buzz'
-      else
-        return number.to_s
-      end
+      number.to_s
+    end
+  end
+
+  private
+
+  def input_haserrors(number)
+    if !number.is_a?(Numeric)
+      'Invalid input type: number must be an number.'
+    elsif !number.is_a?(Integer) && !number.positive?
+      'Invalid input type: number must be a positive integer.'
+    else
+      false
     end
   end
 end
